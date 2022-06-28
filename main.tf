@@ -8,13 +8,13 @@ terraform {
     required_version = ">= 0.14.9"
 }
 
-with provider["registry.terraform.io/hashicorp/aws"] {
+  provider "aws" {
   region = var.region
   profile = "default"
   default_tags {
       tags = var.prop_tags
-  }
-}
+   }
+ }
 
 # simple codebuild project
 resource "aws_codebuild_project" "codebuild_project" {

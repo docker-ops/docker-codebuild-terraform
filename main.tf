@@ -8,7 +8,7 @@ terraform {
     required_version = ">= 0.14.9"
 }
 
-provider aws { 
+with provider["registry.terraform.io/hashicorp/aws"] {
   region = var.region
   profile = "default"
   default_tags {

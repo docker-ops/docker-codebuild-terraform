@@ -13,6 +13,6 @@ resource "aws_iam_role" "role" {
 }
 
 resource "aws_iam_role_policy" "example" {
-  role = aws_iam_role.role.name
+  role = aws_iam_role.name
   policy = replace(replace(data.local_file.policy.content, "ACCOUNT_ID", var.account_id), "CODEBUILD_NAME", var.codebuild_name) 
 }

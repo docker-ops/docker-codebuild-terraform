@@ -9,7 +9,6 @@ terraform {
 }
 
   provider "aws" {
-  credentials_file = /.aws/credentials
   region = var.region
   profile = "default"
   default_tags {

@@ -9,7 +9,6 @@ terraform {
 }
 
 provider aws { 
-  registry.terraform.io/hashicorp/aws 
   region = var.region
   profile = "default"
   default_tags {

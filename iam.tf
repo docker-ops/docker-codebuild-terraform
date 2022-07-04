@@ -9,7 +9,7 @@ data "local_file" "policy" {
 
 resource "aws_iam_role" "role" {
   name               = "iam-role-terraform"
-  assume_role_policy = data.local_file.assumeRole_policy.json
+  assume_role_policy = data.local_file.assumeRole_policy.content
 }
 
 resource "aws_iam_role_policy" "example" {

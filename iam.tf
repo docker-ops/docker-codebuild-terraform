@@ -12,7 +12,7 @@ resource "aws_iam_role" "role" {
   assume_role_policy = data.local_file.assumeRole_policy.content
 }
 
-resource "aws_iam_role_policy" "ec2-read-only-policy-attachment""example" {
+resource "aws_iam_role_policy" "example" {
   role = aws_iam_role.role.name
   policy = replace(replace(data.local_file.policy.content, "ACCOUNT_ID", var.account_id), "CODEBUILD_NAME", var.codebuild_name) 
 }

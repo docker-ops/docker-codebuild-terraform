@@ -1,7 +1,7 @@
 account_id = "ACCOUNT_ID"
 codebuild_params = {
       "NAME" = "codebuild-demo-terraform"
-      "GIT_REPO" = "https://github.com/ilsaTi/docker-simple-webpage.git"
+      "GIT_REPO" = "https://github.com/docker-ops/docker-simple-webpage.git"
       "IMAGE" = "aws/codebuild/standard:4.0"
       "TYPE" = "LINUX_CONTAINER"
       "COMPUTE_TYPE" = "BUILD_GENERAL1_SMALL"
